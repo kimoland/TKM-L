@@ -25,7 +25,7 @@
                         $rellink = $replace_t2;
                         $checklink = @get_headers($rellink);
                         if ($checklink[7] == "HTTP/1.1 200 OK") {
-                            echo $rellink;
+                            strlen($rellink);
                         } elseif ($checklink[0] == "HTTP/1.1 301 Moved Permanently" || $checklink[0] ==  "HTTP/1.1 404 Not Found") {
                             $replace_t3 = str_replace("http://dl1.big-uploads.xyz/dl.php?", "http://dl2.big-uploads.xyz/dl.php?", $rellink);
                             $rellink =  $replace_t3;
